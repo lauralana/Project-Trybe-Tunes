@@ -43,6 +43,7 @@ onInputChange = (event) => {
             <label htmlFor="login">
               Login:
               <input
+                id="login"
                 type="text"
                 key="login"
                 data-testid="login-name-input"
