@@ -16,13 +16,12 @@ export default class Login extends Component {
 
 onInputChange = (event) => {
   const minCharacter = 3;
+  this.setState({ btn: true });
   if (event.target.value.length >= minCharacter) {
     this.setState({
       btn: false,
       userName: event.target.value,
     });
-  } else {
-    this.setState({ btn: true });
   }
 }
 
@@ -39,27 +38,30 @@ onInputChange = (event) => {
 
     return (
       <BrowserRouter>
-        { redirect ? <Redirect to="/search" /> : null}
-        <div data-testid="page-login">
-          <label htmlFor="login">
-            Login:
-            <input
-              type="text"
-              key="login"
-              data-testid="login-name-input"
-              onChange={ this.onInputChange }
-            />
-          </label>
-          <button
-            type="button"
-            key="button"
-            data-testid="login-submit-button"
-            onClick={ this.validateBtn }
-            disabled={ btn }
-          >
-            Entrar
-          </button>
-        </div>
+        { redirect ? <Redirect to="/search" /> : (
+          <div data-testid="page-login">
+            <label htmlFor="login">
+              Login:
+              <input
+                type="text"
+                key="login"
+                data-testid="login-name-input"
+                onChange={ this.onInputChange }
+              />
+            </label>
+            <button
+              type="button"
+              key="button"
+              data-testid="login-submit-button"
+              onClick={ this.validateBtn }
+              disabled={ btn }
+            >
+              Entrar
+            </button>
+          </div>
+
+        ) }
+
       </BrowserRouter>
     );
   }
