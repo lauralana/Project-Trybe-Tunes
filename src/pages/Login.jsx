@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { createUser } from '../services/userAPI';
 import Loading from './Loading';
 
@@ -37,7 +37,7 @@ onInputChange = (event) => {
     if (loading) return <Loading />;
 
     return (
-      <BrowserRouter>
+      <section>
         { redirect ? <Redirect to="/search" /> : (
           <div data-testid="page-login">
             <label htmlFor="login">
@@ -63,7 +63,7 @@ onInputChange = (event) => {
 
         ) }
 
-      </BrowserRouter>
+      </section>
     );
   }
 }
