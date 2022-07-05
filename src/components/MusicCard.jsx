@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Loading from '../pages/Loading';
-import { addSong } from '../services/favoriteSongsAPI';
+import { addSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
 
 export default class MusicCard extends Component {
   constructor() {
@@ -10,6 +10,10 @@ export default class MusicCard extends Component {
       loading: false,
       favCheck: false,
     };
+  }
+
+  async componentDidMount() {
+    await getFavoriteSongs();
   }
 
   funcAddFavorites = async (event) => {
