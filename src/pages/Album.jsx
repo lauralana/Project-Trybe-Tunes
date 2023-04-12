@@ -41,6 +41,7 @@ render() {
           trackName={ song.trackName }
           previewUrl={ song.previewUrl }
           trackId={ song.trackId }
+          song={ song }
         />))}
       </section>
     </div>
