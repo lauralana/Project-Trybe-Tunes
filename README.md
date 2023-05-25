@@ -1,6 +1,6 @@
 # TrybeTunes
 
-[Trybe](https://www.betrybe.com/) é uma escola de tecnologia focada na formação de Desenvolvedores Web. Este projeto foi proposto como uma atividade para aprimorar os estudos em Ciência da Computação.
+[Trybe](https://www.betrybe.com/) é uma escola de tecnologia focada na formação de Desenvolvedores Web. Este projeto foi proposto como uma atividade para aprimorar os estudos em Front-End.
 
 ## Sobre :
 
